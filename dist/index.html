@@ -79,6 +79,37 @@
   window.addEventListener("load", scrollTopNow);
 })();
 </script>
+<script id="featured-products-view-all-btn">
+(function () {
+  function addProductsButton() {
+    if (document.getElementById("view-all-products-list-btn")) return;
+
+    var section = document.querySelector('[data-testid="featured-products-section"] .max-w-7xl');
+    if (!section) return;
+
+    var wrap = document.createElement("div");
+    wrap.className = "text-center mt-12";
+
+    var link = document.createElement("a");
+    link.id = "view-all-products-list-btn";
+    link.href = "/products";
+    link.className = "inline-flex items-center justify-center bg-transparent border-2 border-primary hover:bg-primary text-white font-oswald tracking-widest rounded-none px-8 py-3";
+    link.textContent = "VIEW ALL PRODUCT LIST";
+
+    var arrow = document.createElement("span");
+    arrow.textContent = " ->";
+    arrow.style.marginLeft = "8px";
+    link.appendChild(arrow);
+
+    wrap.appendChild(link);
+    section.appendChild(wrap);
+  }
+
+  window.addEventListener("load", function () {
+    setTimeout(addProductsButton, 800);
+  });
+})();
+</script>
 </head>
     <body>
         <noscript>You need to enable JavaScript to run this app.</noscript>
