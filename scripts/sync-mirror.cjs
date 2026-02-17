@@ -26,4 +26,11 @@ function copyDirRecursive(src, dest) {
 }
 
 copyDirRecursive(sourceDir, targetDir);
-console.log("Synced public/mirror -> mirror");
+
+const indexHtml = path.join(root, "index.html");
+const fallback404 = path.join(root, "404.html");
+if (fs.existsSync(indexHtml)) {
+  fs.copyFileSync(indexHtml, fallback404);
+}
+
+console.log("Synced public/mirror -> mirror and index.html -> 404.html");
