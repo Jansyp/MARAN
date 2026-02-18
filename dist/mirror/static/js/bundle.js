@@ -75158,14 +75158,14 @@ const HomePage = () => {
     }
   };
   const categoryImages = {
-    'Copper Material': 'https://images.unsplash.com/photo-1751486289950-5c4898a4c773',
-    'HVAC Valve': 'https://images.unsplash.com/photo-1707409464203-df2f21c32b9c',
-    'AC Unit & Service Spares': 'https://images.unsplash.com/photo-1734178832989-1a1617d7d983',
-    'Insulation Foam': 'https://images.unsplash.com/photo-1697143493170-8cf836596b34',
-    'Electrical Cable': 'https://images.unsplash.com/photo-1563456020978-5a5eb63ce380',
-    'Refrigerants Gas': 'https://images.unsplash.com/photo-1764231502962-a246b3fca4e3',
-    'HVAC Tools': 'https://images.unsplash.com/photo-1751486289950-5c4898a4c773',
-    'Tapes': 'https://images.unsplash.com/photo-1639481839173-a0c0d7cc732b'
+    'Copper Material': '../images/copper.jfif',
+    'HVAC Valve': '../images/valve.jfif',
+    'AC Unit & Service Spares': '../images/ac-spares.jfif',
+    'Insulation Foam': '../images/foam.jfif',
+    'Electrical Cable': '../images/cable.jfif',
+    'Refrigerants Gas': '../images/RefrigiratorGas.jfif',
+    'HVAC Tools': '../images/valve.jfif',
+    'Tapes': '../images/tapes.jfif'
   };
   const features = [{
     icon: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxDEV)(lucide_react__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -75242,7 +75242,7 @@ const HomePage = () => {
         children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxDEV)("div", {
           className: "w-full h-full bg-cover bg-center",
           style: {
-            backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1700915181252-6b90f990b015?w=1920&q=80')`
+            backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('${window.location.pathname.startsWith("/MARAN") ? "/MARAN" : ""}/mirror/static/media/hero.jfif')`
           },
           "x-file-name": "HomePage",
           "x-line-number": "78",
@@ -75810,7 +75810,7 @@ const HomePage = () => {
                 "x-source-editable": "false",
                 "x-array-item-param": "category",
                 children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxDEV)("img", {
-                  src: categoryImages[category.name] || 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=500&q=80',
+                  src: categoryImages[category.name] || '../images/coding.jfif',
                   alt: category.name,
                   className: "w-full h-full object-cover group-hover:scale-110 transition-transform duration-500",
                   "x-file-name": "HomePage",
