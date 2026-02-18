@@ -92,7 +92,7 @@
 
     var link = document.createElement("a");
     link.id = "view-all-products-list-btn";
-    link.href = "/products";
+    link.href = (window.location.pathname.startsWith("/MARAN") ? "/MARAN" : "") + "/products";
     link.className = "inline-flex items-center justify-center bg-transparent border-2 border-primary hover:bg-primary text-white font-oswald tracking-widest rounded-none px-8 py-3";
     link.textContent = "VIEW ALL PRODUCT LIST";
 

@@ -71299,8 +71299,7 @@ function App() {
     "x-component": "div",
     "x-id": "App_13",
     "x-dynamic": "false",
-    children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxDEV)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.BrowserRouter, {
-      "x-file-name": "App",
+    children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxDEV)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.BrowserRouter, { basename: window.location.pathname.startsWith("/MARAN") ? "/MARAN" : "/", "x-file-name": "App",
       "x-line-number": "14",
       "x-component": "BrowserRouter",
       "x-id": "App_14",
