@@ -79328,8 +79328,9 @@ module.exports = "data:image/svg+xml,%3Csvg viewBox=%270 0 400 400%27 xmlns=%27h
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	__webpack_require__("./node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js");
-/******/ 	__webpack_require__("./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=443&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true");
-/******/ 	__webpack_require__("./node_modules/webpack/hot/dev-server.js");
+/******/ 	/* HMR dev clients removed for static deploy */
+/******/ 	/* __webpack_require__("./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=443&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true"); */
+/******/ 	/* __webpack_require__("./node_modules/webpack/hot/dev-server.js"); */
 /******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
 /******/ 	
 /******/ })()

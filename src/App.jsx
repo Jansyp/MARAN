@@ -1,56 +1,27 @@
-﻿import { useCallback, useRef } from "react";
+import AboutPage from "./pages/About";
+import ContactPage from "./pages/Contact";
+import HomePage from "./pages/Home";
+import ProductsPage from "./pages/Products";
 
-const menuSpacingCss = `
-header nav ul,
-nav ul {
-  column-gap: 18px !important;
+function resolvePage(pathname) {
+  if (pathname === "/" || pathname === "/home") {
+    return HomePage;
+  }
+  if (pathname.startsWith("/products")) {
+    return ProductsPage;
+  }
+  if (pathname.startsWith("/contact")) {
+    return ContactPage;
+  }
+  if (pathname.startsWith("/about")) {
+    return AboutPage;
+  }
+  return HomePage;
 }
-
-header nav a + a,
-nav a + a {
-  margin-left: 18px !important;
-}
-
-header nav [class*="menu"] > *,
-nav [class*="menu"] > * {
-  margin-right: 18px !important;
-}
-
-header nav [class*="menu"] > *:last-child,
-nav [class*="menu"] > *:last-child {
-  margin-right: 0 !important;
-}
-`;
 
 export default function App() {
-  const frameRef = useRef(null);
+  const pathname = window.location.pathname.toLowerCase();
+  const ActivePage = resolvePage(pathname);
 
-  const applyMenuSpacing = useCallback(() => {
-    const frame = frameRef.current;
-    const doc = frame?.contentDocument;
-    if (!doc?.head) {
-      return;
-    }
-
-    let styleTag = doc.getElementById("menu-spacing-overrides");
-    if (!styleTag) {
-      styleTag = doc.createElement("style");
-      styleTag.id = "menu-spacing-overrides";
-      doc.head.appendChild(styleTag);
-    }
-
-    styleTag.textContent = menuSpacingCss;
-  }, []);
-
-  return (
-    <main className="app-root" aria-label="Rathvac replica container">
-      <iframe
-        ref={frameRef}
-        title="Rathvac Replica"
-        src="/mirror/index.html"
-        className="replica-frame"
-        onLoad={applyMenuSpacing}
-      />
-    </main>
-  );
+  return <ActivePage />;
 }
