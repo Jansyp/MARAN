@@ -75157,15 +75157,16 @@ const HomePage = () => {
       console.error('Error fetching featured products:', error);
     }
   };
+  const imageBasePath = window.location.pathname.startsWith("/MARAN") ? "/MARAN/Images" : "/Images";
   const categoryImages = {
-    'Copper Material': '../images/copper.jfif',
-    'HVAC Valve': '../images/valve.jfif',
-    'AC Unit & Service Spares': '../images/ac-spares.jfif',
-    'Insulation Foam': '../images/foam.jfif',
-    'Electrical Cable': '../images/cable.jfif',
-    'Refrigerants Gas': '../images/RefrigiratorGas.jfif',
-    'HVAC Tools': '../images/valve.jfif',
-    'Tapes': '../images/tapes.jfif'
+    'Copper Material': `${imageBasePath}/Cooper.jfif`,
+    'HVAC Valve': `${imageBasePath}/valve.jfif`,
+    'AC Unit & Service Spares': `${imageBasePath}/ac-spares.jfif`,
+    'Insulation Foam': `${imageBasePath}/foam.jfif`,
+    'Electrical Cable': `${imageBasePath}/cable.jfif`,
+    'Refrigerants Gas': `${imageBasePath}/RefrigiratorGas.jfif`,
+    'HVAC Tools': `${imageBasePath}/valve.jfif`,
+    'Tapes': `${imageBasePath}/tapes.jfif`
   };
   const features = [{
     icon: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxDEV)(lucide_react__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -75810,7 +75811,7 @@ const HomePage = () => {
                 "x-source-editable": "false",
                 "x-array-item-param": "category",
                 children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxDEV)("img", {
-                  src: categoryImages[category.name] || '../images/coding.jfif',
+                  src: categoryImages[category.name] || `${imageBasePath}/coding.jfif`,
                   alt: category.name,
                   className: "w-full h-full object-cover group-hover:scale-110 transition-transform duration-500",
                   "x-file-name": "HomePage",
